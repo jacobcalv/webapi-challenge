@@ -1,5 +1,22 @@
 # Sprint Challenge: Express and Node.js - Projects & Actions
 
+### Endpoints
+
+| Method | Endpoint                | Description                                                                                                                                                                 |
+| ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| POST   | /projects              | Creates a project.                                                                                                        |
+| GET    | /projects              | Returns an array of all the projects contained in the database.                                                                                                         |
+| GET    | /projects/:id         | Returns the project object with the specified `id`.                                                                                                                              |
+| GET    | /projects/actions/:id | Returns all the action objects associated with the project's `id`.                                                                                 |
+| DELETE | /projects/:id          | Removes the project with the specified `id`.                                                              |
+| PUT    | /projects/edit/:id          | Updates the project with the specified `id`.                                                        |
+| POST   | /actions              | Creates a action, requires a valid `project_id`.                                                                                                        |
+| GET    | /actions              | Returns an array of all the actions for all projects contained in the database.                                                                                                         |
+| GET    | /actions/:id         | Returns the action object with the specified `id`.                                                                                                                            |
+| DELETE | /actions/:id          | Removes the project with the specified `id`.                                                              |
+| PUT    | /actions/edit/:id          | Updates the action with the specified `id`.                                                        |
+
+
 ## Description
 
 In this challenge, you design and create a web API to manage the following resources: `Projects` and `Actions`.

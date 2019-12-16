@@ -22,8 +22,9 @@ router.get('/:id', validateProjectId, async (req, res) => {
 
 router.get('/actions/:id', validateProjectId, async (req, res) => {
     try{
-        const projectActions = projectModel.getProjectActions(req.project.id)
-        res.status(200).json({success: "true", projectActions})
+        const projectActions = req.project.actions
+        const projectActionsCall = projectModel.getProjectActions(req.project.id)
+        res.status(200).json({success: "true", projectActions, projectActionsCall})
     } catch (error) {
         res.status(500).json({error})
     }
