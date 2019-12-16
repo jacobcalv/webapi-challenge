@@ -40,13 +40,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+    Express is unopinionated meaning that you can code the way you want and express doesn't make you do it a certain way. Also express allows you to use
+    middlewares.
+
 - [ ] Describe Middleware?
+
+    Middleware is something that intercepts your calls and has access to your req and res objects and can read what is being passed through. 
 
 - [ ] Describe a Resource?
 
+    A resource, simply put is an object that contains information within a database. 
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+    An API can return a status code that tells the user if the call was successful or not. 
+
 - [ ] How can we partition our application into sub-applications?
+
+    You can accomplish this by creating routes for different portions of your api/database.
 
 ## Minimum Viable Product
 
