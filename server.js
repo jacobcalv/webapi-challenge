@@ -1,11 +1,13 @@
 const express = require('express');
-const router = require('./router.js')
+const projectRouter = require('./projectModelRouter.js')
+const actionRouter = require('./actionModelRouter.js')
 const server = express();
 const moment = require('moment')
 
 server.use(logger);
 server.use(express.json());
-server.use('/project', router);
+server.use('/projects', projectRouter);
+server.use('/actions', actionRouter)
 
 
 function logger(req, res, next) {

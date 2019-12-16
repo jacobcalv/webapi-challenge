@@ -58,37 +58,7 @@ router.delete('/:id', validateProjectId, async (req, res) => {
     }
 })
 
-router.get('/', async (req, res) => {
-    try{
-        res.status(200).json({success: "true"})
-    } catch (error) {
-        res.status(500).json({error})
-    }
-})
 
-router.get('/', async (req, res) => {
-    try{
-        res.status(200).json({success: "true"})
-    } catch (error) {
-        res.status(500).json({error})
-    }
-})
-
-router.get('/', async (req, res) => {
-    try{
-        res.status(200).json({success: "true"})
-    } catch (error) {
-        res.status(500).json({error})
-    }
-})
-
-router.get('/', async (req, res) => {
-    try{
-        res.status(200).json({success: "true"})
-    } catch (error) {
-        res.status(500).json({error})
-    }
-})
 
 //middleware
 
