@@ -20,6 +20,15 @@ router.get('/:id', validateProjectId, async (req, res) => {
     }
 })
 
+router.get('/actions/:id', validateProjectId, async (req, res) => {
+    try{
+        const projectActions = projectModel.getProjectActions(req.project.id)
+        res.status(200).json({success: "true", projectActions})
+    } catch (error) {
+        res.status(500).json({error})
+    }
+})
+
 router.post('/', async (req, res) => {
     const projectInfo = req.body;
     try{
@@ -30,17 +39,20 @@ router.post('/', async (req, res) => {
     }
 })
 
-router.get('/', async (req, res) => {
+router.put('/edit/:id', validateProjectId, async (req, res) => {
+    const projectInfo = req.body;
     try{
-        res.status(200).json({success: "true"})
+        const projectChanges = await projectModel.update(req.project.id, projectInfo)
+        res.status(200).json({success: "true", projectChanges})
     } catch (error) {
         res.status(500).json({error})
     }
 })
 
-router.get('/', async (req, res) => {
+router.delete('/:id', validateProjectId, async (req, res) => {
     try{
-        res.status(200).json({success: "true"})
+        const deletedProject = await projectModel.remove(req.project.id)
+        res.status(200).json({success: "true", deletedProject})
     } catch (error) {
         res.status(500).json({error})
     }
