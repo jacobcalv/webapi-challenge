@@ -1,5 +1,22 @@
 # Sprint Challenge: Express and Node.js - Projects & Actions
 
+### Endpoints
+
+| Method | Endpoint                | Description                                                                                                                                                                 |
+| ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| POST   | /projects              | Creates a project.                                                                                                        |
+| GET    | /projects              | Returns an array of all the projects contained in the database.                                                                                                         |
+| GET    | /projects/:id         | Returns the project object with the specified `id`.                                                                                                                              |
+| GET    | /projects/actions/:id | Returns all the action objects associated with the project's `id`.                                                                                 |
+| DELETE | /projects/:id          | Removes the project with the specified `id`.                                                              |
+| PUT    | /projects/edit/:id          | Updates the project with the specified `id`.                                                        |
+| POST   | /actions              | Creates a action, requires a valid `project_id`.                                                                                                        |
+| GET    | /actions              | Returns an array of all the actions for all projects contained in the database.                                                                                                         |
+| GET    | /actions/:id         | Returns the action object with the specified `id`.                                                                                                                            |
+| DELETE | /actions/:id          | Removes the project with the specified `id`.                                                              |
+| PUT    | /actions/edit/:id          | Updates the action with the specified `id`.                                                        |
+
+
 ## Description
 
 In this challenge, you design and create a web API to manage the following resources: `Projects` and `Actions`.
@@ -40,13 +57,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+    Express is unopinionated meaning that you can code the way you want and express doesn't make you do it a certain way. Also express allows you to use
+    middlewares.
+
 - [ ] Describe Middleware?
+
+    Middleware is something that intercepts your calls and has access to your req and res objects and can read what is being passed through. 
 
 - [ ] Describe a Resource?
 
+    A resource, simply put is an object that contains information within a database. 
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+    An API can return a status code that tells the user if the call was successful or not. 
+
 - [ ] How can we partition our application into sub-applications?
+
+    You can accomplish this by creating routes for different portions of your api/database.
 
 ## Minimum Viable Product
 
